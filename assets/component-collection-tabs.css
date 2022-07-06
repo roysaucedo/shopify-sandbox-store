@@ -1,0 +1,75 @@
+.tabs-ctr {
+  height: 8vh;
+}
+
+.main-tabs-div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tab-div {
+  padding: 5px 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #121212;
+}
+
+
+/* HOVER EFFECTS */
+.tab-div:hover {
+  color: #008060;
+  background-color: #f4fffc;
+  border-bottom: 5px solid #008060;
+}
+
+.dropdown-ctr {
+  display: none;
+  }
+
+.icon-caret {
+    height: 0.6rem
+}
+
+.flex {
+  display: flex;
+}
+
+/* MOBILE DROPDOWN */
+
+@media only screen and (max-width: 600px) {
+
+  .tabs-ctr {
+  display: none;
+  }
+
+
+  .dropdown-ctr {
+    height: 5vh;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+  }
+  
+  .main-tabs-div {
+    display: none;
+    position: relative;
+    z-index: 2;
+    padding: 5px;
+    background-color: #ffffff;
+  }
+
+  .dropdown-btn {
+    background-color: #ffffff;
+    border: none;
+    font-size: 16px;
+    color: #121212;
+    margin-right: 5px;
+  }
+
+
+  
+
+}
+
