@@ -1,0 +1,170 @@
+{{ 'component-collection-tabs.css' | asset_url | stylesheet_tag }}
+
+<div class="tabs-ctr page-width">
+  <div class="main-tabs-div">
+      
+          <div class="tab-div">
+              <a href="{{ section.settings.collection-link-1 }}">
+                <p>{{ section.settings.title-1 }}</p>
+              </a>
+          </div>
+           <div class="tab-div">
+              <a href="{{ section.settings.collection-link-2 }}">
+                <p>{{ section.settings.title-2 }}</p>
+              </a>
+          </div>
+          <div class="tab-div">
+              <a href="{{ section.settings.collection-link-3}}">
+                <p>{{ section.settings.title-3 }}</p>
+              </a>
+          </div>
+           <div class="tab-div">
+              <a href="{{ section.settings.collection-link-4 }}">
+                <p>{{ section.settings.title-4 }}</p>
+              </a>
+          </div>
+           <div class="tab-div">
+              <a href="{{ section.settings.collection-link-5 }}">
+                <p>{{ section.settings.title-5 }}</p>
+              </a>
+          </div>
+
+          
+  </div>
+</div>
+
+<!-- MOBILE DROPDOWN -->
+
+<div class="dropdown-ctr page-width">
+
+
+      <div class="flex">
+        <span class="dropdown-btn">View Collections</span>
+        <div class="icon-caret">{% render 'icon-caret' %}</div>
+      </div>
+      
+          <div class="main-tabs-div" id="show-tabs-div">
+              
+                  <div class="tab-div">
+                      <a href="{{ section.settings.collection-link-1 }}">
+                        <p>{{ section.settings.title-1 }}</p>
+                      </a>
+                  </div>
+                   <div class="tab-div">
+                      <a href="{{ section.settings.collection-link-2 }}">
+                        <p>{{ section.settings.title-2 }}</p>
+                      </a>
+                  </div>
+                  <div class="tab-div">
+                      <a href="{{ section.settings.collection-link-3}}">
+                        <p>{{ section.settings.title-3 }}</p>
+                      </a>
+                  </div>
+                   <div class="tab-div">
+                      <a href="{{ section.settings.collection-link-4 }}">
+                        <p>{{ section.settings.title-4 }}</p>
+                      </a>
+                  </div>
+                   <div class="tab-div">
+                      <a href="{{ section.settings.collection-link-5 }}">
+                        <p>{{ section.settings.title-5 }}</p>
+                      </a>
+                  </div>
+              
+          </div>
+    
+</div>
+
+
+
+
+{% schema %}
+{
+  "name": "Collection tabs",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title-1",
+      "default": "Featured collection",
+      "label": "t:sections.featured-collection.settings.title.label"
+    },
+    {
+      "type": "url",
+      "id": "collection-link-1",
+      "label": "Collection 1 link"
+    },
+    {
+      "type": "text",
+      "id": "title-2",
+      "default": "Featured collection",
+      "label": "t:sections.featured-collection.settings.title.label"
+    },
+    {
+      "type": "url",
+      "id": "collection-link-2",
+      "label": "Collection 2 link"
+    },
+    {
+      "type": "text",
+      "id": "title-3",
+      "default": "Featured collection",
+      "label": "t:sections.featured-collection.settings.title.label"
+    },
+    {
+      "type": "url",
+      "id": "collection-link-3",
+      "label": "Collection 3 link"
+    },
+    {
+      "type": "text",
+      "id": "title-4",
+      "default": "Featured collection",
+      "label": "t:sections.featured-collection.settings.title.label"
+    },
+    {
+      "type": "url",
+      "id": "collection-link-4",
+      "label": "Collection 4 link"
+    },
+    {
+      "type": "text",
+      "id": "title-5",
+      "default": "Featured collection",
+      "label": "t:sections.featured-collection.settings.title.label"
+    },
+    {
+      "type": "url",
+      "id": "collection-link-5",
+      "label": "Collection 5 link"
+    }
+    
+  ],
+  "presets": [
+    {
+      "name": "t:sections.featured-collection.presets.name"
+    }
+  ]
+}
+{% endschema %}
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  $(function(){
+    $('.flex').click(
+      function(){
+        $('.main-tabs-div').slideToggle(300);
+      });
+  });
+</script>
+
+
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+
+{% endjavascript %}
